@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: shappy
+  datasource:
+    url: jdbc:mysql://localhost:3306/shappy?createDatabaseIfNotExist=true
+    username: root
+    password: MyPassword!
+  jpa:
+    show-sql: true
