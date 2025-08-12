@@ -1,5 +1,6 @@
 package com.example.app.spring_poll_app.services;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -22,5 +23,9 @@ public class PollService {
 
     public List<Poll> getAllPolls() {
         return pollRepository.findAll();
+    }
+
+    public Optional<Poll> getPollById(Long id) {
+        return pollRepository.findById(id);
     }
 }
