@@ -1,5 +1,8 @@
 package com.example.app.spring_poll_app.controller;
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +20,15 @@ public class PollController {
         this.pollService = pollService;
     }
 
+    // Create API
     @PostMapping
     public Poll createPoll(@RequestBody Poll poll) {
         return pollService.createPoll(poll); 
+    }
+
+    // Read API
+    @GetMapping
+    public List<Poll> getAllPolls() {
+        return pollService.getAllPolls();
     }
 }
