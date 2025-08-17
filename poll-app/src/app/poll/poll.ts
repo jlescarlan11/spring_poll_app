@@ -49,6 +49,10 @@ export class PollComponent implements OnInit {
     });
   }
 
+  addOption() {
+    this.newPoll.options.push({ optionText: '', voteCount: 0 });
+  }
+
   resetPoll() {
     this.newPoll = {
       question: '',
